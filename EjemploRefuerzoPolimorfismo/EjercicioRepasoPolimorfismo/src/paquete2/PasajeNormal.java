@@ -9,12 +9,14 @@ package paquete2;
  *
  * @author reroes
  */
-public class PasajeNormal extends PasajeUrbano {
+public abstract class PasajeNormal extends PasajeUrbano {
     
     public PasajeNormal(double pasaje){
         super(pasaje);
     }
-    
+public void establecerValorPasaje() {
+    valorPasaje = valorFijo;
+    }    
     
     @Override
     public String toString(){

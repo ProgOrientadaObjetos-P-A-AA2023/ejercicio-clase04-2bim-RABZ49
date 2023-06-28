@@ -9,18 +9,21 @@ package paquete2;
  *
  * @author reroes
  */
-public class PasajeMenorEdad extends PasajeUrbano {
-    
-    public PasajeMenorEdad(double pasaje){
+public abstract class PasajeMenorEdad extends PasajeUrbano {
+
+    public PasajeMenorEdad(double pasaje) {
         super(pasaje);
     }
-    
-        
+
+    public void establecerValorPasaje() {
+        valorPasaje = (valorFijo * 0.20) - valorFijo;
+    }
+
     @Override
-    public String toString(){
+    public String toString() {
         return String.format("Tipo de pasaje: Menor de edad\n"
                 + "%s",
                 super.toString()
-                );
+        );
     }
 }

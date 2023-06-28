@@ -8,12 +8,14 @@ package paquete2;
  *
  * @author reroes
  */
-public class PasajeUniversitario extends PasajeUrbano {
+public abstract class PasajeUniversitario extends PasajeUrbano {
     
     public PasajeUniversitario(double pasaje){
         super(pasaje);
     }
-    
+    public void establecerValorPasaje() {
+        valorPasaje = (valorFijo * 0.30) - valorFijo;
+    }
        
     @Override
     public String toString(){
